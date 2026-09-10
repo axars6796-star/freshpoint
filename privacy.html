@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Freshpoint · Privacy Policy | Your Data Matters</title>
+  <meta name="description" content="Freshpoint's privacy policy: How we collect, use, and protect your data. Transparent practices, GDPR & CCPA compliant, Google Ads certified.">
+  <!-- Font Awesome & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Syne', sans-serif;
+      background-color: #fefcf8;
+      color: #151515;
+      scroll-behavior: smooth;
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #eae6df;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #bc9a6c;
+      border-radius: 10px;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    /* Header Navigation */
+    .site-header {
+      background: #ffffffea;
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #f0e3d4;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 20px 0;
+      gap: 20px;
+    }
+    .logo-block a {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      background: linear-gradient(125deg, #1E2F2A, #C47A44);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .nav-modern {
+      display: flex;
+      gap: 44px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .nav-modern a {
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #2b2d2b;
+      transition: 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .nav-modern a i {
+      font-size: 1rem;
+    }
+    .nav-modern a:hover, .nav-modern a.active {
+      color: #bc6f2c;
+    }
+    .cart-badge {
+      background: #1E2F2A;
+      color: white;
+      font-size: 0.7rem;
+      border-radius: 40px;
+      padding: 2px 8px;
+      margin-left: 5px;
+    }
+
+    /* Buttons */
+    .btn-primary {
+      background: #1E2F2A;
+      color: white;
+      border: none;
+      padding: 12px 32px;
+      border-radius: 60px;
+      font-weight: 600;
+      font-family: 'Syne', sans-serif;
+      cursor: pointer;
+      transition: all 0.25s;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .btn-primary:hover {
+      background: #bc6f2c;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 20px rgba(188,111,44,0.2);
+    }
+
+    /* Page Header */
+    .page-header {
+      margin: 48px 0 24px;
+      text-align: center;
+    }
+    .page-header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background: linear-gradient(125deg, #1E2F2A, #bc6f2c);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .page-header p {
+      font-size: 1.1rem;
+      color: #6b5a4a;
+      margin-top: 12px;
+    }
+
+    /* Privacy Layout - FULLY RESPONSIVE */
+    .privacy-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 2.5fr;
+      gap: 48px;
+      margin: 40px 0 80px;
+    }
+    .privacy-sidebar {
+      background: white;
+      border-radius: 32px;
+      padding: 32px;
+      border: 1px solid #f0e3d4;
+      height: fit-content;
+      position: sticky;
+      top: 100px;
+    }
+    .privacy-sidebar h3 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #f0e3d4;
+    }
+    .privacy-nav {
+      list-style: none;
+    }
+    .privacy-nav li {
+      margin-bottom: 16px;
+    }
+    .privacy-nav a {
+      text-decoration: none;
+      color: #4a3e32;
+      font-weight: 500;
+      transition: 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .privacy-nav a:hover, .privacy-nav a.active {
+      color: #bc6f2c;
+    }
+    .privacy-nav a i {
+      width: 24px;
+      color: #bc6f2c;
+    }
+
+    .privacy-content {
+      background: white;
+      border-radius: 32px;
+      padding: 48px;
+      border: 1px solid #f0e3d4;
+    }
+    .privacy-section {
+      margin-bottom: 48px;
+      scroll-margin-top: 100px;
+    }
+    .privacy-section:last-child {
+      margin-bottom: 0;
+    }
+    .privacy-section h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #1E2F2A;
+    }
+    .privacy-section h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 24px 0 12px;
+      color: #bc6f2c;
+    }
+    .privacy-section p {
+      line-height: 1.6;
+      color: #3a3228;
+      margin-bottom: 16px;
+    }
+    .privacy-section ul, .privacy-section ol {
+      margin: 16px 0 16px 24px;
+      line-height: 1.6;
+      color: #3a3228;
+    }
+    .privacy-section li {
+      margin-bottom: 8px;
+    }
+    .highlight-box {
+      background: #faf6f0;
+      border-left: 4px solid #bc6f2c;
+      padding: 20px 24px;
+      border-radius: 20px;
+      margin: 24px 0;
+    }
+    .badge-new {
+      background: #f2e5da;
+      padding: 4px 14px;
+      border-radius: 100px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #bc6f2c;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+    .data-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 24px 0;
+    }
+    .data-card {
+      background: #fefcf8;
+      border: 1px solid #f0e3d4;
+      border-radius: 20px;
+      padding: 20px;
+    }
+    .data-card i {
+      font-size: 2rem;
+      color: #bc6f2c;
+      margin-bottom: 12px;
+    }
+    .data-card h4 {
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .data-card p {
+      font-size: 0.85rem;
+      margin-bottom: 0;
+    }
+
+    footer {
+      background: #1b2622;
+      color: #dad3c9;
+      margin-top: 60px;
+      padding: 48px 0 32px;
+    }
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    .footer-links {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: #dad3c9;
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+    .footer-links a:hover {
+      color: #bc6f2c;
+    }
+
+    /* ========== FULLY RESPONSIVE ENHANCEMENTS ========== */
+    @media (max-width: 1024px) {
+      .container {
+        padding: 0 32px;
+      }
+      .privacy-wrapper {
+        gap: 32px;
+      }
+    }
+    @media (max-width: 900px) {
+      .privacy-wrapper {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .privacy-sidebar {
+        position: relative;
+        top: 0;
+        width: 100%;
+        margin-bottom: 0;
+        padding: 28px;
+      }
+      .privacy-sidebar h3 {
+        margin-bottom: 16px;
+      }
+      .privacy-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+      }
+      .privacy-nav li {
+        margin-bottom: 0;
+        flex: 0 0 auto;
+      }
+      .privacy-nav a {
+        font-size: 0.85rem;
+        background: #faf6f0;
+        padding: 6px 14px;
+        border-radius: 40px;
+        transition: all 0.2s;
+      }
+      .privacy-nav a i {
+        width: auto;
+        font-size: 0.8rem;
+      }
+      .privacy-nav a.active, .privacy-nav a:hover {
+        background: #bc6f2c10;
+        color: #bc6f2c;
+      }
+      .privacy-content {
+        padding: 32px 28px;
+      }
+      .page-header h1 {
+        font-size: 2.5rem;
+      }
+      .header-flex {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .nav-modern {
+        gap: 24px;
+      }
+    }
+    @media (max-width: 680px) {
+      .container {
+        padding: 0 20px;
+      }
+      .privacy-content {
+        padding: 24px 20px;
+      }
+      .privacy-section h2 {
+        font-size: 1.5rem;
+      }
+      .page-header {
+        margin: 32px 0 16px;
+      }
+      .page-header h1 {
+        font-size: 2rem;
+      }
+      .data-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .header-flex {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-modern {
+        width: 100%;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .nav-modern a {
+        font-size: 0.85rem;
+      }
+      .cart-badge {
+        font-size: 0.65rem;
+      }
+      .highlight-box {
+        padding: 16px 18px;
+      }
+      .footer-grid {
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+        align-items: center;
+      }
+      .footer-links {
+        justify-content: center;
+        gap: 20px;
+      }
+    }
+    @media (max-width: 480px) {
+      .privacy-nav {
+        gap: 8px;
+      }
+      .privacy-nav a {
+        font-size: 0.7rem;
+        padding: 5px 12px;
+      }
+      .privacy-content {
+        padding: 20px 16px;
+      }
+      .privacy-section h2 {
+        font-size: 1.35rem;
+      }
+      .privacy-section h3 {
+        font-size: 1.05rem;
+      }
+      .btn-primary {
+        padding: 8px 20px;
+      }
+      .logo-block a {
+        font-size: 1.6rem;
+      }
+      .privacy-sidebar {
+        padding: 20px;
+      }
+      .badge-new {
+        font-size: 0.6rem;
+      }
+      .page-header p {
+        font-size: 0.9rem;
+      }
+    }
+    .flex-between {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .active {
+      color: #bc6f2c !important;
+      font-weight: 800;
+    }
+    .empty-cart-message {
+      text-align: center;
+      padding: 80px 20px;
+    }
+    hr {
+      margin: 24px 0;
+      border: 0;
+      height: 1px;
+      background: #f0e4d8;
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTV0NLN2X5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NTV0NLN2X5');
+  </script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-flex">
+    <div class="logo-block"><a href="index.html">Freshpoint</a></div>
+    <div class="nav-modern">
+      <a href="index.html" id="nav-home"><i class="fas fa-compass"></i> Studio</a>
+      <a href="shop.html" id="nav-shop"><i class="fas fa-vest"></i> Archive</a>
+      <a href="cart.html" id="nav-cart"><i class="fas fa-bag-shopping"></i> Bag <span id="cartCountNav" class="cart-badge">0</span></a>
+      <a href="checkout.html" id="nav-checkout"><i class="fas fa-shield-alt"></i> Secure</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="page-header">
+      <span class="badge-new">Last updated: January 2025</span>
+      <h1>Privacy Policy</h1>
+      <p>Your trust is our priority — transparent, secure, and in your control</p>
+    </div>
+
+    <div class="privacy-wrapper">
+      <!-- Sidebar Navigation - fully responsive scrollspy -->
+      <div class="privacy-sidebar">
+        <h3><i class="fas fa-list-ul"></i> On this page</h3>
+        <ul class="privacy-nav">
+          <li><a href="#introduction" class="nav-link" data-section="introduction"><i class="fas fa-info-circle"></i> Introduction</a></li>
+          <li><a href="#information-collect" class="nav-link" data-section="information-collect"><i class="fas fa-database"></i> Information</a></li>
+          <li><a href="#how-we-use" class="nav-link" data-section="how-we-use"><i class="fas fa-chart-line"></i> How We Use</a></li>
+          <li><a href="#cookies" class="nav-link" data-section="cookies"><i class="fas fa-cookie-bite"></i> Cookies</a></li>
+          <li><a href="#sharing" class="nav-link" data-section="sharing"><i class="fas fa-share-alt"></i> Sharing</a></li>
+          <li><a href="#data-security" class="nav-link" data-section="data-security"><i class="fas fa-lock"></i> Security</a></li>
+          <li><a href="#your-rights" class="nav-link" data-section="your-rights"><i class="fas fa-user-shield"></i> Your Rights</a></li>
+          <li><a href="#children" class="nav-link" data-section="children"><i class="fas fa-child"></i> Children</a></li>
+          <li><a href="#updates" class="nav-link" data-section="updates"><i class="fas fa-edit"></i> Updates</a></li>
+          <li><a href="#contact-privacy" class="nav-link" data-section="contact-privacy"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+        <div class="highlight-box" style="margin-top: 24px;">
+          <i class="fas fa-shield-alt" style="font-size: 1.5rem; color: #bc6f2c;"></i>
+          <p style="margin-top: 12px; font-weight: 500;">GDPR & CCPA Compliant</p>
+          <p style="font-size: 0.85rem;">We respect your privacy rights under global regulations.</p>
+        </div>
+      </div>
+
+      <!-- Main Privacy Content -->
+      <div class="privacy-content">
+        <div id="introduction" class="privacy-section">
+          <span class="badge-new">Our commitment</span>
+          <h2>Introduction</h2>
+          <p>Welcome to Freshpoint ("we", "us", "our"). Your privacy is critically important to us. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and make purchases. We are committed to being transparent about our data practices and complying with all applicable privacy laws, including GDPR, CCPA, and Google Ads data handling policies.</p>
+          <div class="highlight-box">
+            <i class="fas fa-check-circle" style="color: #2b6e4f; margin-right: 8px;"></i>
+            <strong>Google Ads Compliance:</strong> Freshpoint fully adheres to Google's advertising policies regarding customer data. We never sell personal information to third parties for advertising purposes, and we clearly disclose all data collection practices.
+          </div>
+        </div>
+
+        <div id="information-collect" class="privacy-section">
+          <h2>Information We Collect</h2>
+          <p>We collect information that you voluntarily provide to us when you:</p>
+          <div class="data-grid">
+            <div class="data-card">
+              <i class="fas fa-user-circle"></i>
+              <h4>Personal Identifiers</h4>
+              <p>Name, email address, phone number, shipping/billing address</p>
+            </div>
+            <div class="data-card">
+              <i class="fas fa-credit-card"></i>
+              <h4>Payment Information</h4>
+              <p>Encrypted payment details via secure processors (we never store full card numbers)</p>
+            </div>
+            <div class="data-card">
+              <i class="fas fa-shopping-bag"></i>
+              <h4>Order History</h4>
+              <p>Products purchased, returns, preferences, and size information</p>
+            </div>
+            <div class="data-card">
+              <i class="fas fa-desktop"></i>
+              <h4>Technical Data</h4>
+              <p>IP address, browser type, device information, and site usage analytics</p>
+            </div>
+          </div>
+          <p>We do <strong>not</strong> collect sensitive personal data (e.g., social security numbers, biometric data) or information about your precise geolocation without your explicit consent.</p>
+        </div>
+
+        <div id="how-we-use" class="privacy-section">
+          <h2>How We Use Your Information</h2>
+          <p>We use your personal information for the following legitimate business purposes:</p>
+          <ul>
+            <li><i class="fas fa-check"></i> <strong>Order Processing:</strong> To process, fulfill, and deliver your purchases, including shipping confirmations and tracking.</li>
+            <li><i class="fas fa-check"></i> <strong>Customer Support:</strong> To respond to your inquiries, process returns and refunds, and resolve issues.</li>
+            <li><i class="fas fa-check"></i> <strong>Marketing Communications:</strong> To send you promotional emails, newsletters, and special offers (only with your consent, and you may opt out at any time).</li>
+            <li><i class="fas fa-check"></i> <strong>Site Improvement:</strong> To analyze usage trends, improve our website functionality, and personalize your shopping experience.</li>
+            <li><i class="fas fa-check"></i> <strong>Legal Compliance:</strong> To comply with applicable laws, regulations, and legal processes.</li>
+          </ul>
+          <div class="highlight-box">
+            <i class="fas fa-envelope-open-text"></i> <strong>Marketing Opt-Out:</strong> You can unsubscribe from marketing emails by clicking the "unsubscribe" link in any email or by contacting support@Freshpoint.com.
+          </div>
+        </div>
+
+        <div id="cookies" class="privacy-section">
+          <h2>Cookies & Tracking Technologies</h2>
+          <p>We use cookies and similar tracking technologies to enhance your browsing experience. Cookies are small text files stored on your device that help us remember your preferences, analyze site traffic, and personalize content.</p>
+          <h3>Types of Cookies We Use:</h3>
+          <ul>
+            <li><strong>Essential Cookies:</strong> Required for basic site functionality (e.g., cart, checkout). Cannot be disabled.</li>
+            <li><strong>Analytics Cookies:</strong> Help us understand how visitors interact with our site (e.g., Google Analytics).</li>
+            <li><strong>Functional Cookies:</strong> Remember your preferences and login details.</li>
+            <li><strong>Advertising Cookies:</strong> Used to deliver relevant Google Ads and measure campaign performance (GDPR-compliant, with consent banner).</li>
+          </ul>
+          <p>You can manage cookie preferences through your browser settings. Please note that disabling certain cookies may affect site functionality.</p>
+        </div>
+
+        <div id="sharing" class="privacy-section">
+          <h2>Information Sharing & Disclosure</h2>
+          <p>We never sell your personal information to third parties. We may share your data only in the following limited circumstances:</p>
+          <ul>
+            <li><strong>Service Providers:</strong> We share information with trusted partners who help us operate our business (e.g., payment processors, shipping carriers, email platforms). These providers are contractually obligated to protect your data.</li>
+            <li><strong>Legal Requirements:</strong> We may disclose information if required by law, court order, or to protect our rights or safety.</li>
+            <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets, your information may be transferred (we will notify you of any such change).</li>
+          </ul>
+          <div class="highlight-box">
+            <i class="fas fa-handshake"></i> <strong>Google Ads Data Policy:</strong> Freshpoint does not upload or share customer lists with Google for remarketing without explicit consent. All advertising complies with Google's Customer Match policies.
+          </div>
+        </div>
+
+        <div id="data-security" class="privacy-section">
+          <h2>Data Security</h2>
+          <p>We implement industry-standard security measures to protect your personal information:</p>
+          <ul>
+            <li><i class="fas fa-lock"></i> <strong>SSL/TLS Encryption:</strong> All data transmitted between your browser and our site is encrypted using 256-bit SSL.</li>
+            <li><i class="fas fa-database"></i> <strong>Secure Storage:</strong> Customer data is stored on encrypted servers with restricted access.</li>
+            <li><i class="fas fa-credit-card"></i> <strong>PCI Compliance:</strong> Our payment processing partners are PCI DSS Level 1 certified.</li>
+            <li><i class="fas fa-shield-alt"></i> <strong>Regular Audits:</strong> We conduct periodic security reviews and vulnerability scans.</li>
+          </ul>
+          <p>While we strive to protect your data, no method of transmission over the internet is 100% secure. We encourage you to protect your account credentials and contact us immediately if you suspect any unauthorized activity.</p>
+        </div>
+
+        <div id="your-rights" class="privacy-section">
+          <h2>Your Privacy Rights</h2>
+          <p>Depending on your location (e.g., GDPR for EEA residents, CCPA for California residents), you may have the following rights:</p>
+          <ul>
+            <li><strong>Right to Access:</strong> Request a copy of the personal data we hold about you.</li>
+            <li><strong>Right to Correction:</strong> Correct inaccurate or incomplete information.</li>
+            <li><strong>Right to Deletion:</strong> Request that we delete your personal data (subject to legal exceptions).</li>
+            <li><strong>Right to Opt-Out:</strong> Opt out of the sale of your personal information (we do not sell your data).</li>
+            <li><strong>Right to Data Portability:</strong> Receive your data in a structured, machine-readable format.</li>
+            <li><strong>Right to Withdraw Consent:</strong> Withdraw any previously given consent for marketing or cookies.</li>
+          </ul>
+          <div class="highlight-box">
+            <i class="fas fa-globe"></i> <strong>To exercise your rights:</strong> Email <strong>privacy@Freshpoint.com</strong> with your request. We will respond within 30 days. Identity verification may be required.
+          </div>
+        </div>
+
+        <div id="children" class="privacy-section">
+          <h2>Children's Privacy</h2>
+          <p>Freshpoint does not knowingly sell products to or collect personal information from children under the age of 16. If you believe we have inadvertently collected data from a minor, please contact us immediately so we can delete the information.</p>
+        </div>
+
+        <div id="updates" class="privacy-section">
+          <h2>Updates to This Privacy Policy</h2>
+          <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. The "Last updated" date at the top of this page indicates when the policy was last revised. We encourage you to review this page periodically. For material changes, we will notify you via email or a prominent notice on our website.</p>
+        </div>
+
+        <div id="contact-privacy" class="privacy-section">
+          <h2>Contact Us</h2>
+          <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact our Data Protection Officer:</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 32px; margin-top: 20px;">
+            <div>
+              <i class="fas fa-envelope" style="color: #bc6f2c;"></i>
+              <strong>Email:</strong> privacy@Freshpoint.com
+            </div>
+            <div>
+              <i class="fas fa-envelope-open-text" style="color: #bc6f2c;"></i>
+              <strong>Data Requests:</strong> dpo@Freshpoint.com
+            </div>
+            <div>
+              <i class="fas fa-map-marker-alt" style="color: #bc6f2c;"></i>
+              <strong>Mail:</strong> Freshpoint Legal Dept., 123 Fashion District, New York, NY 10001, USA
+            </div>
+          </div>
+          <div class="highlight-box" style="margin-top: 24px;">
+            <i class="fas fa-google"></i> <strong>Google Ads Compliance Certification:</strong> Freshpoint has completed Google's customer data policy requirements. We do not use misleading data collection practices, and all advertising is transparent and compliant.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <h4 style="font-weight:700;">Freshpoint</h4>
+      <p style="font-size:0.85rem; margin-top:6px;">Radical transparency · Climate-conscious</p>
+    </div>
+    <div class="footer-links">
+      <a href="returns.html">Returns</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+    <div><i class="fas fa-cc-visa"></i> <i class="fab fa-paypal"></i> SSL Secure</div>
+  </div>
+  <div class="container" style="text-align:center; margin-top: 40px; font-size:0.7rem;">© Freshpoint 2025 — Honest pricing, no hidden fees, compliant with Google Ads policies.</div>
+</footer>
+
+<script>
+  // ---------- CART FUNCTIONS (for badge consistency) ----------
+  function getCart() {
+    const stored = localStorage.getItem('Freshpoint_v2');
+    return stored ? JSON.parse(stored) : [];
+  }
+
+  function updateCartWidget() {
+    const cart = getCart();
+    const totalQ = cart.reduce((s, i) => s + i.quantity, 0);
+    const badgeSpan = document.getElementById('cartCountNav');
+    if (badgeSpan) badgeSpan.innerText = totalQ;
+  }
+
+  // Improved scrollspy and smooth navigation
+  function initScrollSpy() {
+    const sections = document.querySelectorAll('.privacy-section');
+    const navLinks = document.querySelectorAll('.privacy-nav a');
+    
+    function setActiveLink() {
+      let current = '';
+      const scrollPosition = window.scrollY + 140;
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionBottom = sectionTop + section.offsetHeight;
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        const href = link.getAttribute('href').substring(1);
+        if (href === current) {
+          link.classList.add('active');
+        }
+      });
+    }
+    
+    window.addEventListener('scroll', setActiveLink);
+    window.addEventListener('resize', setActiveLink);
+    setActiveLink();
+    
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          const offset = 100;
+          const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+          window.scrollTo({
+            top: elementPosition - offset,
+            behavior: 'smooth'
+          });
+          history.pushState(null, null, `#${targetId}`);
+          navLinks.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        }
+      });
+    });
+    if (window.location.hash) {
+      const initialHash = window.location.hash.substring(1);
+      const initialElem = document.getElementById(initialHash);
+      if (initialElem) {
+        setTimeout(() => {
+          const offset = 100;
+          const pos = initialElem.getBoundingClientRect().top + window.pageYOffset;
+          window.scrollTo({ top: pos - offset, behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    updateCartWidget();
+    initScrollSpy();
+    window.addEventListener('storage', (e) => {
+      if (e.key === 'Freshpoint_v2') updateCartWidget();
+    });
+  });
+</script>
+</body>
+</html>

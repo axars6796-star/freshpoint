@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <title>Freshpoint · Curve New Threads</title>
+  <meta name="description" content="Freshpoint: Redefining modern streetwear. Ethical, bold, and transparent. Secure checkout, free shipping, and full Google Ads policy compliance.">
+  <!-- Font Awesome 6 & modern Google Fonts: Syne for editorial feel -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Syne', sans-serif;
+      background-color: #fefcf8;
+      color: #151515;
+      scroll-behavior: smooth;
+    }
+
+    /* custom scroll */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #eae6df;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #bc9a6c;
+      border-radius: 10px;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* ----- FRESH NAVIGATION (fully responsive & asymmetric) ----- */
+    .site-header {
+      background: #ffffffea;
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #f0e3d4;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 18px 0;
+      gap: 16px;
+    }
+    .logo-block a {
+      font-size: 1.9rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      background: linear-gradient(125deg, #1E2F2A, #C47A44);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .nav-modern {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .nav-modern a {
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #2b2d2b;
+      transition: 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+    .nav-modern a i {
+      font-size: 1rem;
+    }
+    .nav-modern a:hover, .nav-modern a.active {
+      color: #bc6f2c;
+    }
+    .cart-badge {
+      background: #1E2F2A;
+      color: white;
+      font-size: 0.7rem;
+      border-radius: 40px;
+      padding: 2px 8px;
+      margin-left: 5px;
+    }
+
+    /* BUTTONS - organic & earthy */
+    .btn-primary {
+      background: #1E2F2A;
+      color: white;
+      border: none;
+      padding: 12px 32px;
+      border-radius: 60px;
+      font-weight: 600;
+      font-family: 'Syne', sans-serif;
+      cursor: pointer;
+      transition: all 0.25s;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-primary:hover {
+      background: #bc6f2c;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 20px rgba(188,111,44,0.2);
+    }
+    .btn-outline-earth {
+      background: transparent;
+      border: 1.5px solid #1E2F2A;
+      color: #1E2F2A;
+      padding: 10px 26px;
+      border-radius: 60px;
+      font-weight: 600;
+      transition: 0.2s;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-outline-earth:hover {
+      background: #1E2F2A;
+      color: white;
+    }
+    .btn-sm {
+      padding: 6px 18px;
+      font-size: 0.75rem;
+    }
+
+    /* hero - fully responsive grid */
+    .hero-v2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin: 40px 0 80px;
+      background: #F7F2EB;
+      border-radius: 48px;
+      overflow: hidden;
+    }
+    .hero-text {
+      padding: 60px 40px;
+    }
+    .hero-text h1 {
+      font-size: clamp(2.2rem, 6vw, 3.8rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+    .hero-accent {
+      color: #bc6f2c;
+    }
+    .hero-img-area {
+      background: url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover;
+      min-height: 320px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding: 30px;
+    }
+    /* product grid - adaptive columns */
+    .section-title {
+      font-size: clamp(1.8rem, 5vw, 2.2rem);
+      font-weight: 700;
+      margin: 48px 0 24px;
+      letter-spacing: -0.01em;
+      border-left: 8px solid #bc6f2c;
+      padding-left: 20px;
+    }
+    .product-grid-new {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 32px;
+      margin: 40px 0 60px;
+    }
+    .card-curve {
+      background: white;
+      border-radius: 28px;
+      overflow: hidden;
+      transition: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.02);
+      border: 1px solid #efe4d8;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-curve:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 28px 34px -12px rgba(0,0,0,0.12);
+      border-color: #dccfbf;
+    }
+    .card-img {
+      width: 100%;
+      aspect-ratio: 1 / 1.2;
+      object-fit: cover;
+      background: #ede5db;
+    }
+    .card-info {
+      padding: 22px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .price-tag {
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: #bc6f2c;
+    }
+    /* cart & checkout responsive */
+    .cart-layout {
+      background: #ffffff;
+      border-radius: 32px;
+      padding: 28px 24px;
+      margin: 32px 0;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.02);
+      border: 1px solid #f0e4d8;
+    }
+    .cart-item-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      border-bottom: 1px solid #f0e4d8;
+      padding: 20px 0;
+    }
+    .cart-item-row > div:first-child {
+      min-width: 180px;
+      flex: 2;
+    }
+    .checkout-grid-split {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 32px;
+      margin: 40px 0;
+    }
+    .form-card {
+      background: white;
+      border-radius: 28px;
+      padding: 28px 24px;
+      border: 1px solid #ece0d4;
+    }
+    .form-group {
+      margin-bottom: 22px;
+    }
+    .form-group label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+    }
+    input, select {
+      width: 100%;
+      padding: 14px 18px;
+      border-radius: 60px;
+      border: 1px solid #e2d5c8;
+      background: #fff;
+      font-family: 'Syne', sans-serif;
+      font-size: 0.95rem;
+    }
+    input:focus {
+      outline: none;
+      border-color: #bc6f2c;
+    }
+    footer {
+      background: #1b2622;
+      color: #dad3c9;
+      margin-top: 80px;
+      padding: 48px 0 32px;
+    }
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    .badge-new {
+      background: #f2e5da;
+      padding: 4px 14px;
+      border-radius: 100px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #bc6f2c;
+      display: inline-block;
+    }
+    /* INFO BANNER */
+    .info-banner {
+      background: #EDE3D7;
+      border-radius: 32px;
+      padding: 40px 28px;
+      text-align: center;
+      margin: 32px 0 64px;
+    }
+    /* fully responsive quirks */
+    @media (max-width: 900px) {
+      .container { padding: 0 20px; }
+      .hero-v2 { grid-template-columns: 1fr; gap: 20px; margin: 20px 0 50px; }
+      .hero-text { padding: 40px 28px; }
+      .hero-img-area { min-height: 280px; background-position: center; }
+      .checkout-grid-split { grid-template-columns: 1fr; gap: 28px; }
+      .cart-item-row { flex-direction: column; align-items: flex-start; }
+      .cart-item-row > div:first-child { width: 100%; }
+      .nav-modern { gap: 18px; justify-content: flex-start; }
+      .logo-block a { font-size: 1.6rem; }
+    }
+    @media (max-width: 550px) {
+      .header-flex { flex-direction: column; align-items: flex-start; }
+      .nav-modern { width: 100%; justify-content: space-between; flex-wrap: wrap; row-gap: 10px; }
+      .nav-modern a { font-size: 0.8rem; }
+      .btn-primary, .btn-outline-earth { padding: 8px 20px; }
+      .product-grid-new { gap: 20px; }
+      .card-info { padding: 16px; }
+    }
+    .empty-cart-message {
+      text-align: center;
+      padding: 80px 20px;
+    }
+    hr {
+      margin: 24px 0;
+      border: 0;
+      height: 1px;
+      background: #f0e4d8;
+    }
+    .flex-between {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .active {
+      color: #bc6f2c !important;
+      font-weight: 800;
+    }
+  </style>
+
+<!-- Google tag (gtag.js) - Ads compliant demo -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NTV0NLN2X5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NTV0NLN2X5');
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-flex">
+    <div class="logo-block"><a href="index.html">Freshpoint</a></div>
+    <div class="nav-modern">
+      <a href="index.html" id="nav-home"><i class="fas fa-compass"></i> Studio</a>
+      <a href="shop.html" id="nav-shop"><i class="fas fa-vest"></i> Archive</a>
+      <a href="cart.html" id="nav-cart"><i class="fas fa-bag-shopping"></i> Bag <span id="cartCountNav" class="cart-badge">0</span></a>
+      <a href="checkout.html" id="nav-checkout"><i class="fas fa-shield-alt"></i> Secure</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container" id="pageContent"></div>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <h4 style="font-weight:700;">Freshpoint</h4>
+      <p style="font-size:0.85rem; margin-top:6px;">Radical transparency · Climate-conscious</p>
+    </div>
+    <div style="display:flex; gap: 28px; flex-wrap: wrap;">
+      <a href="returns.html" style="color:#dad3c9; text-decoration:none;">Returns</a>
+      <a href="privacy.html" style="color:#dad3c9; text-decoration:none;">Privacy</a>
+      <a href="terms.html" style="color:#dad3c9; text-decoration:none;">Terms and Conditions</a>
+    </div>
+    <div><i class="fas fa-cc-visa"></i> <i class="fab fa-paypal"></i> SSL Secure</div>
+  </div>
+  <div class="container" style="text-align:center; margin-top: 40px; font-size:0.7rem;">© Freshpoint 2025 — Honest pricing, no hidden fees, compliant with Google Ads policies. All transactions are demo-safe.</div>
+</footer>
+
+<script>
+  // ---------- PRODUCTS: fresh editorial collection ----------
+  const products = [
+    { id: 1, name: "Oversized Raw Hem Tee", price: 34.99, category: "unisex", image: "https://images.unsplash.com/photo-1693443687750-611ad77f3aba?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "100% organic cotton, raw edge. Garment-dyed and breathable." },
+    { id: 2, name: "Corduroy Work Jacket", price: 89.99, category: "men", image: "https://images.unsplash.com/photo-1644483878406-bc4a2f63de83?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "Recycled poly/cotton, structured fit with utility pockets." },
+    { id: 3, name: "Satin Midi Skirt", price: 59.99, category: "women", image: "https://images.unsplash.com/photo-1708363390932-15e8a29c0f56?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "Vegan satin, bias cut, eco-friendly and fluid." },
+    { id: 4, name: "Cropped Knit Sweater", price: 69.99, category: "women", image: "https://images.unsplash.com/photo-1578795024466-26f49b4d23f6?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "RWS wool blend, warm & breathable. Cozy texture." },
+    { id: 5, name: "Cargo Utility Pants", price: 79.99, category: "unisex", image: "https://images.unsplash.com/photo-1552902875-9ac1f9fe0c07?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "Organic cotton ripstop, 6 pockets, relaxed taper." },
+    { id: 6, name: "Linen Blend Blazer", price: 119.99, category: "men", image: "https://images.unsplash.com/photo-1740710370552-a49b5b01f80a?q=80&w=798&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "Lightweight, unlined, summer essential with natural drape." }
+  ];
+
+  // ---------- CART STORAGE ----------
+  function getCart() {
+    const stored = localStorage.getItem('Freshpoint_v2');
+    return stored ? JSON.parse(stored) : [];
+  }
+  function saveCart(cart) {
+    localStorage.setItem('Freshpoint_v2', JSON.stringify(cart));
+    updateCartWidget();
+  }
+  function updateCartWidget() {
+    const cart = getCart();
+    const totalQ = cart.reduce((s,i) => s + i.quantity, 0);
+    const badgeSpan = document.getElementById('cartCountNav');
+    if(badgeSpan) badgeSpan.innerText = totalQ;
+    // update any dynamic total displays across rendered pages
+    const totalSpan = document.getElementById('cartTotalDisplay');
+    if(totalSpan) {
+      const total = cart.reduce((s,i)=> s + (i.price * i.quantity),0);
+      totalSpan.innerText = total.toFixed(2);
+    }
+    const checkoutTotalSpan = document.getElementById('orderTotalDynamic');
+    if(checkoutTotalSpan) {
+      const subt = cart.reduce((s,i)=> s + (i.price*i.quantity),0);
+      const ship = subt > 50 ? 0 : 5.99;
+      checkoutTotalSpan.innerText = (subt + ship).toFixed(2);
+    }
+    // Force re-render if we are on cart/checkout to keep UI fresh
+    const path = window.location.pathname;
+    if(path.includes('cart.html') || path.includes('checkout.html')) {
+      renderCurrentPage();
+    }
+  }
+  function addToCart(id, goToCart = false) {
+    let cart = getCart();
+    const product = products.find(p => p.id === id);
+    if(!product) return;
+    const existing = cart.find(i => i.id === id);
+    if(existing) existing.quantity += 1;
+    else cart.push({ ...product, quantity: 1 });
+    saveCart(cart);
+    if(goToCart) window.location.href = 'cart.html';
+    else {
+      // gentle feedback without intrusive alerts (optional)
+      const btn = event?.target;
+      if(btn) btn.style.transform = 'scale(0.97)';
+      setTimeout(() => { if(btn) btn.style.transform = ''; }, 150);
+    }
+  }
+  function updateQty(id, newQty) {
+    if(newQty < 1) return removeCartItem(id);
+    let cart = getCart();
+    const item = cart.find(i => i.id === id);
+    if(item) item.quantity = newQty;
+    saveCart(cart);
+    renderCurrentPage();
+  }
+  function removeCartItem(id) {
+    let cart = getCart();
+    cart = cart.filter(i => i.id !== id);
+    saveCart(cart);
+    renderCurrentPage();
+  }
+
+  // ---------- RENDERING LOGIC (fully responsive) ----------
+  function renderHome() {
+    return `
+      <div class="hero-v2">
+        <div class="hero-text">
+          <span class="badge-new">FW25 DROP</span>
+          <h1>Curve the<br><span class="hero-accent">ordinary.</span></h1>
+          <p style="margin: 24px 0; font-size: clamp(1rem, 3vw, 1.1rem); line-height:1.4;">Freshpoint redefines modern utility — ethical materials, bold silhouettes, and radical price honesty.</p>
+          <a href="shop.html" class="btn-primary"><i class="fas fa-arrow-right"></i> Shop new arrivals</a>
+        </div>
+        <div class="hero-img-area" style="background-image: url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: cover; background-position: center 30%;"></div>
+      </div>
+      <div class="section-title">Best of the season</div>
+      <div class="product-grid-new">
+        ${products.slice(0,3).map(p => `
+          <div class="card-curve">
+            <img class="card-img" src="${p.image}" alt="${p.name}" loading="lazy">
+            <div class="card-info">
+              <div style="font-weight:700; font-size:1.2rem;">${p.name}</div>
+              <div class="price-tag">$${p.price}</div>
+              <div style="display:flex; gap: 12px; margin-top: 18px; flex-wrap:wrap;">
+                <button class="btn-outline-earth btn-sm" onclick="addToCart(${p.id})"><i class="fas fa-plus"></i> Add</button>
+                <a href="product.html?id=${p.id}" class="btn-outline-earth btn-sm" style="text-decoration:none;">View →</a>
+              </div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+      <div class="info-banner">
+        <i class="fas fa-globe-americas" style="font-size: 2rem; color:#bc6f2c;"></i>
+        <h3 style="margin: 16px 0;">Free worldwide shipping over $50</h3>
+        <p>Buy with confidence — return guarantee, SSL secure, and fully Google Ads compliant (no deceptive claims, transparent pricing).</p>
+      </div>
+    `;
+  }
+
+  function renderShop() {
+    return `
+      <div style="margin: 48px 0 20px;">
+        <h1 style="font-size: clamp(2rem, 6vw, 2.8rem); font-weight:800;">Archive</h1>
+        <p>Timeless pieces, zero waste.</p>
+      </div>
+      <div class="product-grid-new">
+        ${products.map(p => `
+          <div class="card-curve">
+            <img class="card-img" src="${p.image}" alt="${p.name}" loading="lazy">
+            <div class="card-info">
+              <div style="font-weight:700;">${p.name}</div>
+              <div class="price-tag">$${p.price}</div>
+              <div style="display:flex; justify-content: space-between; margin-top: 16px; gap: 8px;">
+                <button class="btn-outline-earth btn-sm" onclick="addToCart(${p.id})"><i class="fas fa-cart-shopping"></i> Add</button>
+                <a href="product.html?id=${p.id}" class="btn-outline-earth btn-sm" style="text-decoration:none;">Details</a>
+              </div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+  }
+
+  function renderProductDetail(pid) {
+    const prod = products.find(p => p.id === pid);
+    if(!prod) return `<div style="padding:100px 0; text-align:center;"><h2>Not found</h2><a href="shop.html" class="btn-primary">back to archive</a></div>`;
+    return `
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin: 60px 0;">
+        <div><img src="${prod.image}" style="width:100%; border-radius: 32px; box-shadow: 0 12px 24px rgba(0,0,0,0.05);" alt="${prod.name}"></div>
+        <div>
+          <span class="badge-new">responsible</span>
+          <h1 style="font-size: clamp(2rem, 5vw, 2.8rem); margin: 20px 0 8px;">${prod.name}</h1>
+          <div class="price-tag" style="font-size: 2rem;">$${prod.price}</div>
+          <p style="margin: 28px 0; line-height:1.5;">${prod.description}</p>
+          <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <button class="btn-primary" onclick="addToCart(${prod.id}, true)"><i class="fas fa-bolt"></i> Buy now</button>
+            <button class="btn-outline-earth" onclick="addToCart(${prod.id})"><i class="fas fa-heart"></i> Add to bag</button>
+          </div>
+          <hr>
+          <p><i class="fas fa-truck"></i> Free shipping over $50 | 30-day returns</p>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderCart() {
+    const cart = getCart();
+    if(cart.length === 0) {
+      return `<div class="empty-cart-message"><i class="fas fa-shopping-bag" style="font-size: 4rem; opacity:0.4;"></i><h2 style="margin:20px 0;">Your bag is empty</h2><a href="shop.html" class="btn-primary">Explore collection</a></div>`;
+    }
+    const subtotal = cart.reduce((s,i)=> s + (i.price * i.quantity),0);
+    const shipping = subtotal > 50 ? 0 : 5.99;
+    const total = subtotal + shipping;
+    return `
+      <h1 style="margin: 48px 0 16px;">Your bag · <span style="font-weight:400;">${cart.reduce((s,i)=>s+i.quantity,0)} items</span></h1>
+      <div class="cart-layout">
+        ${cart.map(item => `
+          <div class="cart-item-row">
+            <div style="display: flex; gap: 18px; align-items:center; flex-wrap:wrap;">
+              <img src="${item.image}" width="70" style="border-radius: 20px;" alt="${item.name}">
+              <div><strong>${item.name}</strong><br>$${item.price}</div>
+            </div>
+            <div style="display: flex; gap: 14px; align-items:center;">
+              <button class="btn-outline-earth btn-sm" onclick="updateQty(${item.id}, ${item.quantity-1})">−</button>
+              <span style="min-width: 32px; text-align:center; font-weight:600;">${item.quantity}</span>
+              <button class="btn-outline-earth btn-sm" onclick="updateQty(${item.id}, ${item.quantity+1})">+</button>
+            </div>
+            <div style="font-weight:800; min-width: 80px;">$${(item.price * item.quantity).toFixed(2)}</div>
+            <button class="btn-outline-earth btn-sm" onclick="removeCartItem(${item.id})"><i class="fas fa-trash-can"></i> Remove</button>
+          </div>
+        `).join('')}
+        <div style="margin-top: 32px; text-align:right; border-top: 1px solid #f0e4d8; padding-top: 24px;">
+          <p>Subtotal: <strong>$${subtotal.toFixed(2)}</strong></p>
+          <p>Shipping: ${shipping === 0 ? '<span class="badge-new">Free</span>' : `$${shipping.toFixed(2)}`}</p>
+          <h3 style="margin:12px 0;">Total: $${total.toFixed(2)}</h3>
+          <a href="checkout.html" class="btn-primary" style="margin-top: 16px;"><i class="fas fa-lock"></i> Secure checkout</a>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderCheckout() {
+    const cart = getCart();
+    if(cart.length === 0) {
+      return `<div style="padding:80px 0; text-align:center;"><h2>No items to checkout</h2><a href="shop.html" class="btn-primary">Shop now</a></div>`;
+    }
+    const subtotal = cart.reduce((s,i)=> s + (i.price*i.quantity),0);
+    const shipping = subtotal > 50 ? 0 : 5.99;
+    const total = subtotal + shipping;
+    return `
+      <h1 style="margin: 48px 0 16px;">Secure checkout</h1>
+      <div class="checkout-grid-split">
+        <div class="form-card">
+          <h3><i class="fas fa-address-card"></i> Shipping info</h3>
+          <form id="checkoutCompleteForm">
+            <div class="form-group"><label>Full name</label><input type="text" id="fullName" required></div>
+            <div class="form-group"><label>Email</label><input type="email" id="email" required></div>
+            <div class="form-group"><label>Address</label><input type="text" id="address" required></div>
+            <div class="form-group"><label>Postal code</label><input type="text" id="zip" required></div>
+            <div class="form-group"><label>Card (demo)</label><input type="text" placeholder="4242 4242 4242 4242" required></div>
+            <button type="submit" class="btn-primary" style="width:100%;"><i class="fas fa-check-circle"></i> Complete order — $${total.toFixed(2)}</button>
+            <p style="font-size:0.7rem; margin-top:16px;">Demo transaction. Freshpoint complies with Google Ads policies: accurate pricing, clear return terms, data privacy.</p>
+          </form>
+        </div>
+        <div class="form-card">
+          <h3>Order overview</h3>
+          ${cart.map(i => `<div class="flex-between" style="margin:12px 0;"><span>${i.name} x${i.quantity}</span><span>$${(i.price*i.quantity).toFixed(2)}</span></div>`).join('')}
+          <hr>
+          <div class="flex-between">Subtotal:<span>$${subtotal.toFixed(2)}</span></div>
+          <div class="flex-between">Shipping:<span>${shipping === 0 ? 'Free' : `$${shipping.toFixed(2)}`}</span></div>
+          <div class="flex-between" style="font-weight:800; margin-top:12px;">Total:<span id="orderTotalDynamic">$${total.toFixed(2)}</span></div>
+          <div class="badge-new" style="margin-top: 20px;"><i class="fas fa-shield"></i> 256-bit SSL</div>
+        </div>
+      </div>
+    `;
+  }
+
+  // ----- SIMPLE ROUTER (supports direct links) -----
+  function renderCurrentPage() {
+    const path = window.location.pathname;
+    const container = document.getElementById('pageContent');
+    if(!container) return;
+    if(path.endsWith('index.html') || path === '/' || path.endsWith('/')) {
+      container.innerHTML = renderHome();
+      setActive('home');
+    } else if(path.endsWith('shop.html')) {
+      container.innerHTML = renderShop();
+      setActive('shop');
+    } else if(path.endsWith('product.html')) {
+      const params = new URLSearchParams(window.location.search);
+      const id = parseInt(params.get('id'));
+      container.innerHTML = renderProductDetail(id);
+      setActive('shop');
+    } else if(path.endsWith('cart.html')) {
+      container.innerHTML = renderCart();
+      setActive('cart');
+    } else if(path.endsWith('checkout.html')) {
+      container.innerHTML = renderCheckout();
+      setActive('checkout');
+      setTimeout(() => {
+        const form = document.getElementById('checkoutCompleteForm');
+        if(form) {
+          form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert(`✨ Order confirmed! Thank you for trusting Freshpoint. All transactions are demo but fully Google Ads compliant (honest pricing, transparent policies).`);
+            localStorage.removeItem('Freshpoint_v2');
+            updateCartWidget();
+            window.location.href = 'index.html';
+          });
+        }
+      }, 50);
+    } else {
+      container.innerHTML = renderHome();
+      setActive('home');
+    }
+    updateCartWidget();
+    attachGlobals();
+  }
+
+  function setActive(page) {
+    const ids = { home:'nav-home', shop:'nav-shop', cart:'nav-cart', checkout:'nav-checkout' };
+    for(let [key, id] of Object.entries(ids)) {
+      const el = document.getElementById(id);
+      if(el) {
+        if(key === page) el.classList.add('active');
+        else el.classList.remove('active');
+      }
+    }
+  }
+  function attachGlobals() {
+    window.addToCart = addToCart;
+    window.updateQty = updateQty;
+    window.removeCartItem = removeCartItem;
+  }
+  window.addEventListener('DOMContentLoaded', () => {
+    renderCurrentPage();
+    window.addEventListener('popstate', renderCurrentPage);
+  });
+  attachGlobals();
+</script>
+</body>
+</html>

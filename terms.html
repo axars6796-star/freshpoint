@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Freshpoint · Terms of Service | Legal Agreement</title>
+  <meta name="description" content="Freshpoint's Terms of Service: Legal agreement for using our website, making purchases, and our policies. Transparent terms, Google Ads compliant.">
+  <!-- Font Awesome & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Syne', sans-serif;
+      background-color: #fefcf8;
+      color: #151515;
+      scroll-behavior: smooth;
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #eae6df;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #bc9a6c;
+      border-radius: 10px;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    /* Header Navigation */
+    .site-header {
+      background: #ffffffea;
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #f0e3d4;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 20px 0;
+      gap: 20px;
+    }
+    .logo-block a {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      background: linear-gradient(125deg, #1E2F2A, #C47A44);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .nav-modern {
+      display: flex;
+      gap: 44px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .nav-modern a {
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #2b2d2b;
+      transition: 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .nav-modern a i {
+      font-size: 1rem;
+    }
+    .nav-modern a:hover, .nav-modern a.active {
+      color: #bc6f2c;
+    }
+    .cart-badge {
+      background: #1E2F2A;
+      color: white;
+      font-size: 0.7rem;
+      border-radius: 40px;
+      padding: 2px 8px;
+      margin-left: 5px;
+    }
+
+    /* Page Header */
+    .page-header {
+      margin: 48px 0 24px;
+      text-align: center;
+    }
+    .page-header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background: linear-gradient(125deg, #1E2F2A, #bc6f2c);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .page-header p {
+      font-size: 1.1rem;
+      color: #6b5a4a;
+      margin-top: 12px;
+    }
+
+    /* Terms Content - FULLY RESPONSIVE LAYOUT */
+    .terms-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 2.5fr;
+      gap: 48px;
+      margin: 40px 0 80px;
+    }
+    .terms-sidebar {
+      background: white;
+      border-radius: 32px;
+      padding: 32px;
+      border: 1px solid #f0e3d4;
+      height: fit-content;
+      position: sticky;
+      top: 100px;
+    }
+    .terms-sidebar h3 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #f0e3d4;
+    }
+    .terms-nav {
+      list-style: none;
+    }
+    .terms-nav li {
+      margin-bottom: 16px;
+    }
+    .terms-nav a {
+      text-decoration: none;
+      color: #4a3e32;
+      font-weight: 500;
+      transition: 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .terms-nav a:hover, .terms-nav a.active {
+      color: #bc6f2c;
+    }
+    .terms-nav a i {
+      width: 24px;
+      color: #bc6f2c;
+    }
+
+    .terms-content {
+      background: white;
+      border-radius: 32px;
+      padding: 48px;
+      border: 1px solid #f0e3d4;
+    }
+    .terms-section {
+      margin-bottom: 48px;
+      scroll-margin-top: 100px;
+    }
+    .terms-section:last-child {
+      margin-bottom: 0;
+    }
+    .terms-section h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #1E2F2A;
+    }
+    .terms-section h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 24px 0 12px;
+      color: #bc6f2c;
+    }
+    .terms-section p {
+      line-height: 1.6;
+      color: #3a3228;
+      margin-bottom: 16px;
+    }
+    .terms-section ul, .terms-section ol {
+      margin: 16px 0 16px 24px;
+      line-height: 1.6;
+      color: #3a3228;
+    }
+    .terms-section li {
+      margin-bottom: 8px;
+    }
+    .highlight-box {
+      background: #faf6f0;
+      border-left: 4px solid #bc6f2c;
+      padding: 20px 24px;
+      border-radius: 20px;
+      margin: 24px 0;
+    }
+    .badge-new {
+      background: #f2e5da;
+      padding: 4px 14px;
+      border-radius: 100px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #bc6f2c;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    footer {
+      background: #1b2622;
+      color: #dad3c9;
+      margin-top: 60px;
+      padding: 48px 0 32px;
+    }
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    .footer-links {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: #dad3c9;
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+    .footer-links a:hover {
+      color: #bc6f2c;
+    }
+
+    /* ========== FULLY RESPONSIVE BREAKPOINTS ========== */
+    @media (max-width: 1024px) {
+      .container {
+        padding: 0 32px;
+      }
+      .terms-wrapper {
+        gap: 32px;
+      }
+    }
+    @media (max-width: 900px) {
+      .terms-wrapper {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .terms-sidebar {
+        position: relative;
+        top: 0;
+        width: 100%;
+        margin-bottom: 0;
+        padding: 28px;
+      }
+      .terms-sidebar h3 {
+        margin-bottom: 16px;
+      }
+      .terms-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+      }
+      .terms-nav li {
+        margin-bottom: 0;
+        flex: 0 0 auto;
+      }
+      .terms-nav a {
+        font-size: 0.85rem;
+        background: #faf6f0;
+        padding: 6px 14px;
+        border-radius: 40px;
+        transition: all 0.2s;
+        white-space: nowrap;
+      }
+      .terms-nav a i {
+        width: auto;
+        font-size: 0.8rem;
+      }
+      .terms-nav a.active, .terms-nav a:hover {
+        background: #bc6f2c10;
+        color: #bc6f2c;
+      }
+      .terms-content {
+        padding: 32px 28px;
+      }
+      .page-header h1 {
+        font-size: 2.5rem;
+      }
+      .header-flex {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .nav-modern {
+        gap: 24px;
+      }
+    }
+    @media (max-width: 680px) {
+      .container {
+        padding: 0 20px;
+      }
+      .terms-content {
+        padding: 24px 20px;
+      }
+      .terms-section h2 {
+        font-size: 1.5rem;
+      }
+      .page-header {
+        margin: 32px 0 16px;
+      }
+      .page-header h1 {
+        font-size: 2rem;
+      }
+      .header-flex {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-modern {
+        width: 100%;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .nav-modern a {
+        font-size: 0.85rem;
+      }
+      .cart-badge {
+        font-size: 0.65rem;
+      }
+      .highlight-box {
+        padding: 16px 18px;
+      }
+      .footer-grid {
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+        align-items: center;
+      }
+      .footer-links {
+        justify-content: center;
+        gap: 20px;
+      }
+    }
+    @media (max-width: 550px) {
+      .terms-nav {
+        gap: 8px;
+      }
+      .terms-nav a {
+        font-size: 0.7rem;
+        padding: 5px 12px;
+        white-space: normal;
+      }
+      .terms-content {
+        padding: 20px 16px;
+      }
+      .terms-section h2 {
+        font-size: 1.35rem;
+      }
+      .terms-section h3 {
+        font-size: 1.05rem;
+      }
+      .logo-block a {
+        font-size: 1.6rem;
+      }
+      .terms-sidebar {
+        padding: 20px;
+      }
+      .badge-new {
+        font-size: 0.6rem;
+      }
+      .page-header p {
+        font-size: 0.9rem;
+      }
+    }
+    .flex-between {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .active {
+      color: #bc6f2c !important;
+      font-weight: 800;
+    }
+    .empty-cart-message {
+      text-align: center;
+      padding: 80px 20px;
+    }
+    hr {
+      margin: 24px 0;
+      border: 0;
+      height: 1px;
+      background: #f0e4d8;
+    }
+    a {
+      text-decoration: none;
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTV0NLN2X5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NTV0NLN2X5');
+  </script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-flex">
+    <div class="logo-block"><a href="index.html">Freshpoint</a></div>
+    <div class="nav-modern">
+      <a href="index.html" id="nav-home"><i class="fas fa-compass"></i> Studio</a>
+      <a href="shop.html" id="nav-shop"><i class="fas fa-vest"></i> Archive</a>
+      <a href="cart.html" id="nav-cart"><i class="fas fa-bag-shopping"></i> Bag <span id="cartCountNav" class="cart-badge">0</span></a>
+      <a href="checkout.html" id="nav-checkout"><i class="fas fa-shield-alt"></i> Secure</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="page-header">
+      <span class="badge-new">Effective Date: January 1, 2025</span>
+      <h1>Terms of Service</h1>
+      <p>Please read these terms carefully before using Freshpoint</p>
+    </div>
+
+    <div class="terms-wrapper">
+      <!-- Sidebar Navigation - fully responsive scrollspy -->
+      <div class="terms-sidebar">
+        <h3><i class="fas fa-list-ul"></i> On this page</h3>
+        <ul class="terms-nav">
+          <li><a href="#agreement" class="nav-link" data-section="agreement"><i class="fas fa-file-signature"></i> Agreement</a></li>
+          <li><a href="#eligibility" class="nav-link" data-section="eligibility"><i class="fas fa-user-check"></i> Eligibility</a></li>
+          <li><a href="#products-pricing" class="nav-link" data-section="products-pricing"><i class="fas fa-tag"></i> Products & Pricing</a></li>
+          <li><a href="#orders" class="nav-link" data-section="orders"><i class="fas fa-shopping-cart"></i> Orders & Payment</a></li>
+          <li><a href="#shipping-delivery" class="nav-link" data-section="shipping-delivery"><i class="fas fa-truck"></i> Shipping</a></li>
+          <li><a href="#returns-refunds" class="nav-link" data-section="returns-refunds"><i class="fas fa-undo-alt"></i> Returns</a></li>
+          <li><a href="#user-conduct" class="nav-link" data-section="user-conduct"><i class="fas fa-gavel"></i> Conduct</a></li>
+          <li><a href="#intellectual-property" class="nav-link" data-section="intellectual-property"><i class="fas fa-copyright"></i> IP</a></li>
+          <li><a href="#limitation-liability" class="nav-link" data-section="limitation-liability"><i class="fas fa-balance-scale"></i> Liability</a></li>
+          <li><a href="#indemnification" class="nav-link" data-section="indemnification"><i class="fas fa-shield"></i> Indemnification</a></li>
+          <li><a href="#governing-law" class="nav-link" data-section="governing-law"><i class="fas fa-gavel"></i> Governing Law</a></li>
+          <li><a href="#changes-terms" class="nav-link" data-section="changes-terms"><i class="fas fa-edit"></i> Changes</a></li>
+          <li><a href="#contact-terms" class="nav-link" data-section="contact-terms"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+        <div class="highlight-box" style="margin-top: 24px;">
+          <i class="fas fa-clock" style="font-size: 1.5rem; color: #bc6f2c;"></i>
+          <p style="margin-top: 12px; font-weight: 500;">Last updated: January 2025</p>
+          <p style="font-size: 0.85rem;">These terms apply to all users of Freshpoint.com</p>
+        </div>
+      </div>
+
+      <!-- Main Terms Content -->
+      <div class="terms-content">
+        <div id="agreement" class="terms-section">
+          <span class="badge-new">Legal Agreement</span>
+          <h2>1. Acceptance of Terms</h2>
+          <p>Welcome to Freshpoint ("Company", "we", "us", "our"). By accessing or using our website (www.Freshpoint.com) and purchasing products from us, you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our website or services.</p>
+          <p>These Terms constitute a legally binding agreement between you and Freshpoint. We reserve the right to update or modify these Terms at any time without prior notice. Your continued use of the site following any changes constitutes acceptance of those changes.</p>
+          <div class="highlight-box">
+            <i class="fas fa-exclamation-triangle" style="color: #bc6f2c;"></i>
+            <strong>Important:</strong> By placing an order with Freshpoint, you acknowledge that you have read, understood, and agree to be bound by these Terms, our Privacy Policy, and Return Policy.
+          </div>
+        </div>
+
+        <div id="eligibility" class="terms-section">
+          <h2>2. Eligibility</h2>
+          <p>To use our website and make purchases, you must:</p>
+          <ul>
+            <li>Be at least 18 years old or the age of majority in your jurisdiction</li>
+            <li>Have the legal capacity to enter into a binding contract</li>
+            <li>Provide accurate, current, and complete information during checkout</li>
+            <li>Not be located in a country subject to US trade sanctions or embargoes</li>
+          </ul>
+          <p>By using Freshpoint, you represent and warrant that you meet all eligibility requirements. We reserve the right to refuse service, terminate accounts, or cancel orders at our sole discretion.</p>
+        </div>
+
+        <div id="products-pricing" class="terms-section">
+          <h2>3. Products & Pricing</h2>
+          <p>All products displayed on Freshpoint are subject to availability. We make every effort to display accurate product descriptions, images, and pricing. However, we do not warrant that product descriptions, images, or other content are error-free.</p>
+          <h3>Pricing Policy</h3>
+          <ul>
+            <li><strong>Transparent Pricing:</strong> All prices are listed in US Dollars ($) and do not include applicable taxes or shipping fees unless otherwise stated.</li>
+            <li><strong>Price Changes:</strong> We reserve the right to change prices at any time without notice. However, price changes will not affect orders that have already been confirmed.</li>
+            <li><strong>Typographical Errors:</strong> In the event of a pricing error, we reserve the right to cancel any orders placed at the incorrect price and issue a full refund.</li>
+          </ul>
+          <h3>Product Availability</h3>
+          <p>Product listings on Freshpoint represent current inventory levels. However, in rare cases, an item may become out of stock after your order is placed. If this occurs, we will notify you and offer a refund or replacement option.</p>
+          <div class="highlight-box">
+            <i class="fas fa-dollar-sign"></i> <strong>Google Ads Compliance:</strong> Freshpoint ensures that all advertised prices are accurate, and any promotions or discounts are clearly disclosed. We do not engage in deceptive pricing practices.
+          </div>
+        </div>
+
+        <div id="orders" class="terms-section">
+          <h2>4. Orders & Payment</h2>
+          <h3>Order Process</h3>
+          <p>When you place an order on Freshpoint, you will receive an order confirmation email acknowledging receipt of your order. This email does not constitute acceptance of your order; it is a confirmation that we have received it. Order acceptance occurs when we ship the products and send a shipping confirmation email.</p>
+          <h3>Payment Methods</h3>
+          <p>We accept major credit cards (Visa, MasterCard, American Express, Discover), PayPal, and other payment methods as displayed at checkout. By providing payment information, you represent that you are authorized to use the selected payment method.</p>
+          <h3>Order Cancellation</h3>
+          <p>You may cancel an order within 1 hour of placement by contacting support@Freshpoint.com. Once an order has been processed for shipping, it cannot be cancelled and must be returned in accordance with our Return Policy.</p>
+          <h3>Fraud Prevention</h3>
+          <p>We reserve the right to refuse or cancel any orders suspected of fraud, unauthorized transactions, or violations of these Terms. We may require additional verification before processing certain orders.</p>
+        </div>
+
+        <div id="shipping-delivery" class="terms-section">
+          <h2>5. Shipping & Delivery</h2>
+          <p>Shipping times and costs vary based on your location and selected shipping method. Estimated delivery times are provided at checkout but are not guaranteed. Freshpoint is not responsible for delays caused by carriers, customs processing, or unforeseen circumstances.</p>
+          <h3>Shipping Policy Highlights</h3>
+          <ul>
+            <li><strong>Free Shipping:</strong> Available on all orders over $50 within the contiguous United States.</li>
+            <li><strong>Processing Time:</strong> Orders are typically processed within 1-3 business days.</li>
+            <li><strong>International Shipping:</strong> Available to select countries. Customers are responsible for any customs duties, taxes, or import fees.</li>
+            <li><strong>Lost Packages:</strong> If your package is lost in transit, please contact us within 14 days of the expected delivery date.</li>
+          </ul>
+          <p>Title and risk of loss pass to you upon delivery to the carrier. Please ensure your shipping address is correct, as we cannot reroute packages after dispatch.</p>
+        </div>
+
+        <div id="returns-refunds" class="terms-section">
+          <h2>6. Returns & Refunds</h2>
+          <p>We want you to love your Freshpoint purchase. If you're not completely satisfied, you may return eligible items within 30 days of delivery. Please review our full <a href="returns.html" style="color: #bc6f2c; text-decoration: underline;">Return Policy</a> for detailed instructions, exclusions, and conditions.</p>
+          <h3>Key Return Terms:</h3>
+          <ul>
+            <li>Items must be unworn, unwashed, and with original tags attached.</li>
+            <li>Refunds are issued to the original payment method within 5-7 business days of receiving your return.</li>
+            <li>Final sale items (clearly marked) are not eligible for return or exchange.</li>
+            <li>Customers are responsible for return shipping costs unless the item is defective or we made an error.</li>
+          </ul>
+          <div class="highlight-box">
+            <i class="fas fa-check-circle"></i> <strong>Google Ads Policy Note:</strong> Our return policy is clearly disclosed prior to purchase, and we do not make misleading claims about return ease or refund speed.
+          </div>
+        </div>
+
+        <div id="user-conduct" class="terms-section">
+          <h2>7. User Conduct</h2>
+          <p>When using our website, you agree not to:</p>
+          <ul>
+            <li>Violate any applicable laws or regulations</li>
+            <li>Infringe upon our intellectual property rights or those of third parties</li>
+            <li>Upload viruses, malware, or other harmful code</li>
+            <li>Attempt to gain unauthorized access to our systems or other users' accounts</li>
+            <li>Use automated scripts or bots to interact with our site</li>
+            <li>Post false, misleading, or fraudulent information</li>
+            <li>Harass, abuse, or harm others through our site or services</li>
+          </ul>
+          <p>Violation of these conduct rules may result in immediate termination of your access to Freshpoint and legal action where appropriate.</p>
+        </div>
+
+        <div id="intellectual-property" class="terms-section">
+          <h2>8. Intellectual Property</h2>
+          <p>All content on the Freshpoint website, including text, graphics, logos, images, product designs, software, and trademarks, is the exclusive property of Freshpoint or its licensors and is protected by copyright, trademark, and other intellectual property laws.</p>
+          <p>You may not reproduce, distribute, modify, create derivative works of, publicly display, or commercially exploit any content from our site without our express written consent. Purchasing a product does not transfer any intellectual property rights to you.</p>
+        </div>
+
+        <div id="limitation-liability" class="terms-section">
+          <h2>9. Limitation of Liability</h2>
+          <p>To the maximum extent permitted by law, Freshpoint and its officers, employees, affiliates, and agents shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of our website or products, even if advised of the possibility of such damages.</p>
+          <p>Our total liability to you for any claim arising from these Terms or your use of our services shall not exceed the amount you paid for the product giving rise to the claim. Some jurisdictions do not allow limitations on liability, so this limitation may not apply to you.</p>
+          <div class="highlight-box">
+            <i class="fas fa-shield-alt"></i> <strong>Google Ads Compliance:</strong> Freshpoint does not make false claims about product performance or guarantee outcomes. All product descriptions are accurate and not misleading.
+          </div>
+        </div>
+
+        <div id="indemnification" class="terms-section">
+          <h2>10. Indemnification</h2>
+          <p>You agree to indemnify, defend, and hold harmless Freshpoint, its affiliates, officers, directors, employees, and agents from and against any and all claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising from:</p>
+          <ul>
+            <li>Your violation of these Terms</li>
+            <li>Your violation of any applicable laws or third-party rights</li>
+            <li>Your use of our website or products</li>
+            <li>Any content you submit to our site</li>
+          </ul>
+        </div>
+
+        <div id="governing-law" class="terms-section">
+          <h2>11. Governing Law & Dispute Resolution</h2>
+          <p>These Terms shall be governed by and construed in accordance with the laws of the State of New York, without regard to its conflict of law principles. Any dispute arising from or relating to these Terms or your use of Freshpoint shall be resolved exclusively in the state or federal courts located in New York County, New York.</p>
+          <p>Prior to initiating any legal proceeding, you agree to first contact us to attempt to resolve the dispute informally. If the dispute cannot be resolved within 30 days, either party may pursue legal action.</p>
+        </div>
+
+        <div id="changes-terms" class="terms-section">
+          <h2>12. Changes to Terms</h2>
+          <p>We reserve the right to modify these Terms at any time. Changes will be effective immediately upon posting to this page. The "Last updated" date at the top of this page indicates when the Terms were last revised. We encourage you to review these Terms periodically. Your continued use of Freshpoint after any changes constitutes your acceptance of the revised Terms.</p>
+          <p>For material changes, we will provide additional notice via email or a prominent banner on our website.</p>
+        </div>
+
+        <div id="contact-terms" class="terms-section">
+          <h2>13. Contact Information</h2>
+          <p>If you have any questions, concerns, or requests regarding these Terms of Service, please contact us:</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 32px; margin-top: 20px;">
+            <div>
+              <i class="fas fa-envelope" style="color: #bc6f2c;"></i>
+              <strong>Email:</strong> legal@Freshpoint.com
+            </div>
+            <div>
+              <i class="fas fa-phone-alt" style="color: #bc6f2c;"></i>
+              <strong>Phone:</strong> +1 (888) 345-CART (2278)
+            </div>
+            <div>
+              <i class="fas fa-map-marker-alt" style="color: #bc6f2c;"></i>
+              <strong>Mail:</strong> Freshpoint Legal Dept., 123 Fashion District, Suite 400, New York, NY 10001, USA
+            </div>
+          </div>
+          <div class="highlight-box" style="margin-top: 24px;">
+            <i class="fas fa-google"></i> <strong>Google Ads Policy Certification:</strong> Freshpoint is fully compliant with Google's Terms of Service for advertisers. We do not engage in deceptive marketing, misleading claims, or prohibited content. All advertising accurately represents our products and policies.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <h4 style="font-weight:700;">Freshpoint</h4>
+      <p style="font-size:0.85rem; margin-top:6px;">Radical transparency · Climate-conscious</p>
+    </div>
+    <div class="footer-links">
+      <a href="returns.html">Returns</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="#">Contact</a>
+    </div>
+    <div><i class="fas fa-cc-visa"></i> <i class="fab fa-paypal"></i> SSL Secure</div>
+  </div>
+  <div class="container" style="text-align:center; margin-top: 40px; font-size:0.7rem;">© Freshpoint 2025 — Honest pricing, transparent terms, compliant with Google Ads policies.</div>
+</footer>
+
+<script>
+  // ---------- CART FUNCTIONS ----------
+  function getCart() {
+    const stored = localStorage.getItem('Freshpoint_v2');
+    return stored ? JSON.parse(stored) : [];
+  }
+
+  function updateCartWidget() {
+    const cart = getCart();
+    const totalQ = cart.reduce((s, i) => s + i.quantity, 0);
+    const badgeSpan = document.getElementById('cartCountNav');
+    if (badgeSpan) badgeSpan.innerText = totalQ;
+  }
+
+  // Improved scrollspy with responsive offset
+  function initScrollSpy() {
+    const sections = document.querySelectorAll('.terms-section');
+    const navLinks = document.querySelectorAll('.terms-nav a');
+    
+    function setActiveLink() {
+      let current = '';
+      const scrollPosition = window.scrollY + 130;
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionBottom = sectionTop + section.offsetHeight;
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        const href = link.getAttribute('href').substring(1);
+        if (href === current) {
+          link.classList.add('active');
+        }
+      });
+    }
+    
+    window.addEventListener('scroll', setActiveLink);
+    window.addEventListener('resize', setActiveLink);
+    setActiveLink();
+    
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          const headerOffset = 100;
+          const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+          window.scrollTo({
+            top: elementPosition - headerOffset,
+            behavior: 'smooth'
+          });
+          history.pushState(null, null, `#${targetId}`);
+          navLinks.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        }
+      });
+    });
+    
+    if (window.location.hash) {
+      const initialHash = window.location.hash.substring(1);
+      const initialElem = document.getElementById(initialHash);
+      if (initialElem) {
+        setTimeout(() => {
+          const offset = 100;
+          const pos = initialElem.getBoundingClientRect().top + window.pageYOffset;
+          window.scrollTo({ top: pos - offset, behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    updateCartWidget();
+    initScrollSpy();
+    window.addEventListener('storage', (e) => {
+      if (e.key === 'Freshpoint_v2') updateCartWidget();
+    });
+  });
+</script>
+</body>
+</html>

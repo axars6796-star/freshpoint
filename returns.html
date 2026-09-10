@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Freshpoint · Returns & Refund Policy | Easy Returns</title>
+  <meta name="description" content="Freshpoint's transparent return policy: 30-day easy returns, free exchanges, and full refunds. Customer-friendly and Google Ads compliant.">
+  <!-- Font Awesome & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Syne', sans-serif;
+      background-color: #fefcf8;
+      color: #151515;
+      scroll-behavior: smooth;
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #eae6df;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #bc9a6c;
+      border-radius: 10px;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    /* Header Navigation */
+    .site-header {
+      background: #ffffffea;
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #f0e3d4;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 20px 0;
+      gap: 20px;
+    }
+    .logo-block a {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      background: linear-gradient(125deg, #1E2F2A, #C47A44);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .nav-modern {
+      display: flex;
+      gap: 44px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .nav-modern a {
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #2b2d2b;
+      transition: 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .nav-modern a i {
+      font-size: 1rem;
+    }
+    .nav-modern a:hover, .nav-modern a.active {
+      color: #bc6f2c;
+    }
+    .cart-badge {
+      background: #1E2F2A;
+      color: white;
+      font-size: 0.7rem;
+      border-radius: 40px;
+      padding: 2px 8px;
+      margin-left: 5px;
+    }
+
+    /* Buttons */
+    .btn-primary {
+      background: #1E2F2A;
+      color: white;
+      border: none;
+      padding: 12px 32px;
+      border-radius: 60px;
+      font-weight: 600;
+      font-family: 'Syne', sans-serif;
+      cursor: pointer;
+      transition: all 0.25s;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .btn-primary:hover {
+      background: #bc6f2c;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 20px rgba(188,111,44,0.2);
+    }
+    .btn-outline-earth {
+      background: transparent;
+      border: 1.5px solid #1E2F2A;
+      color: #1E2F2A;
+      padding: 10px 24px;
+      border-radius: 60px;
+      font-weight: 600;
+      transition: 0.2s;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+    .btn-outline-earth:hover {
+      background: #1E2F2A;
+      color: white;
+    }
+
+    /* Page Header */
+    .page-header {
+      margin: 48px 0 24px;
+      text-align: center;
+    }
+    .page-header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background: linear-gradient(125deg, #1E2F2A, #bc6f2c);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .page-header p {
+      font-size: 1.1rem;
+      color: #6b5a4a;
+      margin-top: 12px;
+    }
+
+    /* Policy Layout - FULLY RESPONSIVE */
+    .policy-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 2.5fr;
+      gap: 48px;
+      margin: 40px 0 80px;
+    }
+    .policy-sidebar {
+      background: white;
+      border-radius: 32px;
+      padding: 32px;
+      border: 1px solid #f0e3d4;
+      height: fit-content;
+      position: sticky;
+      top: 100px;
+    }
+    .policy-sidebar h3 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #f0e3d4;
+    }
+    .policy-nav {
+      list-style: none;
+    }
+    .policy-nav li {
+      margin-bottom: 16px;
+    }
+    .policy-nav a {
+      text-decoration: none;
+      color: #4a3e32;
+      font-weight: 500;
+      transition: 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .policy-nav a:hover, .policy-nav a.active {
+      color: #bc6f2c;
+    }
+    .policy-nav a i {
+      width: 24px;
+      color: #bc6f2c;
+    }
+
+    .policy-content {
+      background: white;
+      border-radius: 32px;
+      padding: 48px;
+      border: 1px solid #f0e3d4;
+    }
+    .policy-section {
+      margin-bottom: 48px;
+      scroll-margin-top: 100px;
+    }
+    .policy-section:last-child {
+      margin-bottom: 0;
+    }
+    .policy-section h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #1E2F2A;
+    }
+    .policy-section h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 24px 0 12px;
+      color: #bc6f2c;
+    }
+    .policy-section p {
+      line-height: 1.6;
+      color: #3a3228;
+      margin-bottom: 16px;
+    }
+    .policy-section ul, .policy-section ol {
+      margin: 16px 0 16px 24px;
+      line-height: 1.6;
+      color: #3a3228;
+    }
+    .policy-section li {
+      margin-bottom: 8px;
+    }
+    .highlight-box {
+      background: #faf6f0;
+      border-left: 4px solid #bc6f2c;
+      padding: 20px 24px;
+      border-radius: 20px;
+      margin: 24px 0;
+    }
+    .badge-new {
+      background: #f2e5da;
+      padding: 4px 14px;
+      border-radius: 100px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #bc6f2c;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      margin: 24px 0;
+    }
+    .step-card {
+      background: #fefcf8;
+      border: 1px solid #f0e3d4;
+      border-radius: 24px;
+      padding: 24px;
+      text-align: center;
+    }
+    .step-card i {
+      font-size: 2.5rem;
+      color: #bc6f2c;
+      margin-bottom: 16px;
+    }
+    .step-card h4 {
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .step-card p {
+      font-size: 0.85rem;
+    }
+
+    footer {
+      background: #1b2622;
+      color: #dad3c9;
+      margin-top: 60px;
+      padding: 48px 0 32px;
+    }
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    .footer-links {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: #dad3c9;
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+    .footer-links a:hover {
+      color: #bc6f2c;
+    }
+
+    /* ========== FULLY RESPONSIVE BREAKPOINTS ========== */
+    @media (max-width: 1024px) {
+      .container {
+        padding: 0 32px;
+      }
+      .policy-wrapper {
+        gap: 32px;
+      }
+    }
+    @media (max-width: 900px) {
+      .policy-wrapper {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .policy-sidebar {
+        position: relative;
+        top: 0;
+        width: 100%;
+        margin-bottom: 0;
+        padding: 28px;
+      }
+      .policy-sidebar h3 {
+        margin-bottom: 16px;
+      }
+      .policy-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+      }
+      .policy-nav li {
+        margin-bottom: 0;
+        flex: 0 0 auto;
+      }
+      .policy-nav a {
+        font-size: 0.85rem;
+        background: #faf6f0;
+        padding: 6px 14px;
+        border-radius: 40px;
+        transition: all 0.2s;
+        white-space: nowrap;
+      }
+      .policy-nav a i {
+        width: auto;
+        font-size: 0.8rem;
+      }
+      .policy-nav a.active, .policy-nav a:hover {
+        background: #bc6f2c10;
+        color: #bc6f2c;
+      }
+      .policy-content {
+        padding: 32px 28px;
+      }
+      .page-header h1 {
+        font-size: 2.5rem;
+      }
+      .header-flex {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .nav-modern {
+        gap: 24px;
+      }
+    }
+    @media (max-width: 680px) {
+      .container {
+        padding: 0 20px;
+      }
+      .policy-content {
+        padding: 24px 20px;
+      }
+      .policy-section h2 {
+        font-size: 1.5rem;
+      }
+      .page-header {
+        margin: 32px 0 16px;
+      }
+      .page-header h1 {
+        font-size: 2rem;
+      }
+      .header-flex {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-modern {
+        width: 100%;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .nav-modern a {
+        font-size: 0.85rem;
+      }
+      .cart-badge {
+        font-size: 0.65rem;
+      }
+      .highlight-box {
+        padding: 16px 18px;
+      }
+      .footer-grid {
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+        align-items: center;
+      }
+      .footer-links {
+        justify-content: center;
+        gap: 20px;
+      }
+      .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+    }
+    @media (max-width: 550px) {
+      .policy-nav {
+        gap: 8px;
+      }
+      .policy-nav a {
+        font-size: 0.7rem;
+        padding: 5px 12px;
+        white-space: normal;
+      }
+      .policy-content {
+        padding: 20px 16px;
+      }
+      .policy-section h2 {
+        font-size: 1.35rem;
+      }
+      .policy-section h3 {
+        font-size: 1.05rem;
+      }
+      .btn-primary, .btn-outline-earth {
+        padding: 8px 20px;
+      }
+      .logo-block a {
+        font-size: 1.6rem;
+      }
+      .policy-sidebar {
+        padding: 20px;
+      }
+      .badge-new {
+        font-size: 0.6rem;
+      }
+      .page-header p {
+        font-size: 0.9rem;
+      }
+      .step-card {
+        padding: 18px;
+      }
+    }
+    .flex-between {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .active {
+      color: #bc6f2c !important;
+      font-weight: 800;
+    }
+    .empty-cart-message {
+      text-align: center;
+      padding: 80px 20px;
+    }
+    hr {
+      margin: 24px 0;
+      border: 0;
+      height: 1px;
+      background: #f0e4d8;
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTV0NLN2X5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NTV0NLN2X5');
+  </script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-flex">
+    <div class="logo-block"><a href="index.html">Freshpoint</a></div>
+    <div class="nav-modern">
+      <a href="index.html" id="nav-home"><i class="fas fa-compass"></i> Studio</a>
+      <a href="shop.html" id="nav-shop"><i class="fas fa-vest"></i> Archive</a>
+      <a href="cart.html" id="nav-cart"><i class="fas fa-bag-shopping"></i> Bag <span id="cartCountNav" class="cart-badge">0</span></a>
+      <a href="checkout.html" id="nav-checkout"><i class="fas fa-shield-alt"></i> Secure</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="page-header">
+      <span class="badge-new">Customer commitment</span>
+      <h1>Returns & Refunds</h1>
+      <p>Hassle-free returns · 30-day guarantee · Transparent policy</p>
+    </div>
+
+    <div class="policy-wrapper">
+      <!-- Sidebar Navigation - responsive scrollspy -->
+      <div class="policy-sidebar">
+        <h3><i class="fas fa-list-ul"></i> On this page</h3>
+        <ul class="policy-nav">
+          <li><a href="#return-policy" class="nav-link" data-section="return-policy"><i class="fas fa-undo-alt"></i> Return Policy</a></li>
+          <li><a href="#how-to-return" class="nav-link" data-section="how-to-return"><i class="fas fa-box-open"></i> How to Return</a></li>
+          <li><a href="#refund-policy" class="nav-link" data-section="refund-policy"><i class="fas fa-dollar-sign"></i> Refund Policy</a></li>
+          <li><a href="#exchanges" class="nav-link" data-section="exchanges"><i class="fas fa-exchange-alt"></i> Exchanges</a></li>
+          <li><a href="#non-returnable" class="nav-link" data-section="non-returnable"><i class="fas fa-ban"></i> Non-returnable</a></li>
+          <li><a href="#shipping-returns" class="nav-link" data-section="shipping-returns"><i class="fas fa-truck"></i> Return Shipping</a></li>
+          <li><a href="#contact" class="nav-link" data-section="contact"><i class="fas fa-envelope"></i> Support</a></li>
+        </ul>
+        <div class="highlight-box" style="margin-top: 24px;">
+          <i class="fas fa-headset" style="font-size: 1.5rem; color: #bc6f2c;"></i>
+          <p style="margin-top: 12px; font-weight: 500;">Questions about your return?</p>
+          <p style="font-size: 0.85rem;">support@Freshpoint.com<br>Mon-Fri, 9am-6pm EST</p>
+        </div>
+      </div>
+
+      <!-- Main Policy Content -->
+      <div class="policy-content">
+        <div id="return-policy" class="policy-section">
+          <span class="badge-new">Updated January 2025</span>
+          <h2>30-Day Easy Return Policy</h2>
+          <p>At Freshpoint, your satisfaction is our priority. If you're not completely in love with your purchase, you can return any eligible item within <strong>30 days of delivery</strong> for a full refund or store credit. We believe in radical transparency — no restocking fees, no hidden conditions.</p>
+          <div class="highlight-box">
+            <i class="fas fa-check-circle" style="color: #2b6e4f; margin-right: 8px;"></i>
+            <strong>Key highlights:</strong> Free returns on defective items · 30-day window · Refunds processed within 5-7 business days
+          </div>
+        </div>
+
+        <div id="how-to-return" class="policy-section">
+          <h2>How to Initiate a Return</h2>
+          <p>Returning an item is simple. Follow these steps to ensure a smooth process:</p>
+          <div class="steps-grid">
+            <div class="step-card">
+              <i class="fas fa-envelope-open-text"></i>
+              <h4>1. Contact Us</h4>
+              <p>Email support@Freshpoint.com with your order number and reason for return.</p>
+            </div>
+            <div class="step-card">
+              <i class="fas fa-tag"></i>
+              <h4>2. Get Return Label</h4>
+              <p>We'll email you a prepaid return shipping label (for US orders).</p>
+            </div>
+            <div class="step-card">
+              <i class="fas fa-box"></i>
+              <h4>3. Pack & Ship</h4>
+              <p>Pack items securely, attach label, and drop off at any carrier location.</p>
+            </div>
+            <div class="step-card">
+              <i class="fas fa-receipt"></i>
+              <h4>4. Refund Issued</h4>
+              <p>Once received, we inspect and issue your refund within 5-7 business days.</p>
+            </div>
+          </div>
+          <p><strong>Note:</strong> For international returns, customers are responsible for return shipping costs unless the item is defective.</p>
+        </div>
+
+        <div id="refund-policy" class="policy-section">
+          <h2>Refund Policy</h2>
+          <p>Once we receive and inspect your returned item, we will notify you of the approval status. Approved refunds will be processed to your original payment method within 5-7 business days.</p>
+          <ul>
+            <li><strong>Full refund:</strong> Items returned in original condition with tags attached.</li>
+            <li><strong>Partial refund:</strong> Items with minor signs of wear or missing original packaging may be subject to a 15% restocking fee.</li>
+            <li><strong>Store credit:</strong> If you prefer, we can issue a Freshpoint gift card for the full amount + 10% bonus credit.</li>
+          </ul>
+          <div class="highlight-box">
+            <i class="fas fa-clock"></i> <strong>Processing time:</strong> Refunds appear in your account within 3-10 business days depending on your bank or payment provider.
+          </div>
+        </div>
+
+        <div id="exchanges" class="policy-section">
+          <h2>Exchanges</h2>
+          <p>Need a different size or color? We offer <strong>free exchanges</strong> on all eligible items.</p>
+          <p>To exchange an item:</p>
+          <ol>
+            <li>Start a return request via email and specify the new size/color.</li>
+            <li>Ship back the original item (we'll cover return shipping).</li>
+            <li>Once received, we ship your replacement item at no additional cost.</li>
+          </ol>
+          <p>Exchange processing typically takes 7-10 business days from the date we receive your return.</p>
+        </div>
+
+        <div id="non-returnable" class="policy-section">
+          <h2>Non-Returnable Items</h2>
+          <p>To maintain hygiene and safety standards, the following items cannot be returned:</p>
+          <ul>
+            <li><i class="fas fa-tshirt"></i> Intimates & undergarments (including swimwear bottoms)</li>
+            <li><i class="fas fa-tag"></i> Final sale items (clearly marked on product page)</li>
+            <li><i class="fas fa-gift"></i> Gift cards</li>
+            <li><i class="fas fa-smile"></i> Face masks and personal care accessories</li>
+          </ul>
+          <p>If you receive a defective item from any of these categories, please contact us immediately for a resolution.</p>
+        </div>
+
+        <div id="shipping-returns" class="policy-section">
+          <h2>Return Shipping Costs</h2>
+          <ul>
+            <li><strong>United States:</strong> Free return shipping for all orders (prepaid label provided).</li>
+            <li><strong>Canada & Mexico:</strong> Flat rate $9.99 for return shipping, deducted from refund.</li>
+            <li><strong>International (Rest of World):</strong> Customer pays return shipping unless item is defective or incorrect.</li>
+          </ul>
+          <p><strong>Lost packages?</strong> If your return package is lost in transit, please contact the carrier with your tracking number. Freshpoint is not responsible for lost return packages without proof of drop-off.</p>
+        </div>
+
+        <div id="contact" class="policy-section">
+          <h2>Contact Our Support Team</h2>
+          <p>Our customer service team is here to help with any return or refund questions.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 32px; margin-top: 20px;">
+            <div>
+              <i class="fas fa-envelope" style="color: #bc6f2c;"></i>
+              <strong>Email:</strong> returns@Freshpoint.com
+            </div>
+            <div>
+              <i class="fas fa-phone-alt" style="color: #bc6f2c;"></i>
+              <strong>Phone:</strong> +1 (888) 345-CART
+            </div>
+            <div>
+              <i class="fas fa-comment-dots" style="color: #bc6f2c;"></i>
+              <strong>Live Chat:</strong> Available on website (bottom right)
+            </div>
+          </div>
+          <div class="highlight-box" style="margin-top: 24px;">
+            <i class="fas fa-shield-alt"></i> <strong>Google Ads Compliance Note:</strong> This return policy is fully transparent, accurate, and clearly communicated. Freshpoint does not engage in misleading return or refund practices. All terms are disclosed prior to purchase at checkout.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <h4 style="font-weight:700;">Freshpoint</h4>
+      <p style="font-size:0.85rem; margin-top:6px;">Radical transparency · Climate-conscious</p>
+    </div>
+    <div class="footer-links">
+      <a href="returns.html">Returns</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+    <div><i class="fas fa-cc-visa"></i> <i class="fab fa-paypal"></i> SSL Secure</div>
+  </div>
+  <div class="container" style="text-align:center; margin-top: 40px; font-size:0.7rem;">© Freshpoint 2025 — Honest pricing, no hidden fees, compliant with Google Ads policies.</div>
+</footer>
+
+<script>
+  // ---------- CART FUNCTIONS (for badge consistency) ----------
+  function getCart() {
+    const stored = localStorage.getItem('Freshpoint_v2');
+    return stored ? JSON.parse(stored) : [];
+  }
+
+  function updateCartWidget() {
+    const cart = getCart();
+    const totalQ = cart.reduce((s, i) => s + i.quantity, 0);
+    const badgeSpan = document.getElementById('cartCountNav');
+    if (badgeSpan) badgeSpan.innerText = totalQ;
+  }
+
+  // Improved scrollspy and smooth navigation with responsive offset
+  function initScrollSpy() {
+    const sections = document.querySelectorAll('.policy-section');
+    const navLinks = document.querySelectorAll('.policy-nav a');
+    
+    function setActiveLink() {
+      let current = '';
+      const scrollPosition = window.scrollY + 130; // offset for sticky header
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionBottom = sectionTop + section.offsetHeight;
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        const href = link.getAttribute('href').substring(1);
+        if (href === current) {
+          link.classList.add('active');
+        }
+      });
+    }
+    
+    window.addEventListener('scroll', setActiveLink);
+    window.addEventListener('resize', setActiveLink);
+    setActiveLink();
+    
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          const headerOffset = 100;
+          const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+          window.scrollTo({
+            top: elementPosition - headerOffset,
+            behavior: 'smooth'
+          });
+          history.pushState(null, null, `#${targetId}`);
+          navLinks.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        }
+      });
+    });
+    
+    // If hash present on load
+    if (window.location.hash) {
+      const initialHash = window.location.hash.substring(1);
+      const initialElem = document.getElementById(initialHash);
+      if (initialElem) {
+        setTimeout(() => {
+          const offset = 100;
+          const pos = initialElem.getBoundingClientRect().top + window.pageYOffset;
+          window.scrollTo({ top: pos - offset, behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    updateCartWidget();
+    initScrollSpy();
+    window.addEventListener('storage', (e) => {
+      if (e.key === 'Freshpoint_v2') updateCartWidget();
+    });
+  });
+</script>
+</body>
+</html>

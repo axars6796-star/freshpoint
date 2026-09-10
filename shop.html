@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Freshpoint · Shop Archive | Ethical Clothing</title>
+  <meta name="description" content="Shop the latest sustainable fashion at Freshpoint. Organic cotton, recycled fabrics, transparent pricing. Free shipping over $50. Google Ads compliant.">
+  <!-- Font Awesome & Google Fonts (Syne) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Syne', sans-serif;
+      background-color: #fefcf8;
+      color: #151515;
+      scroll-behavior: smooth;
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #eae6df;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #bc9a6c;
+      border-radius: 10px;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    /* Header Navigation */
+    .site-header {
+      background: #ffffffea;
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #f0e3d4;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 20px 0;
+      gap: 20px;
+    }
+    .logo-block a {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      background: linear-gradient(125deg, #1E2F2A, #C47A44);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .nav-modern {
+      display: flex;
+      gap: 44px;
+      align-items: center;
+    }
+    .nav-modern a {
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #2b2d2b;
+      transition: 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .nav-modern a i {
+      font-size: 1rem;
+    }
+    .nav-modern a:hover, .nav-modern a.active {
+      color: #bc6f2c;
+    }
+    .cart-badge {
+      background: #1E2F2A;
+      color: white;
+      font-size: 0.7rem;
+      border-radius: 40px;
+      padding: 2px 8px;
+      margin-left: 5px;
+    }
+
+    /* Buttons */
+    .btn-primary {
+      background: #1E2F2A;
+      color: white;
+      border: none;
+      padding: 12px 32px;
+      border-radius: 60px;
+      font-weight: 600;
+      font-family: 'Syne', sans-serif;
+      cursor: pointer;
+      transition: all 0.25s;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-primary:hover {
+      background: #bc6f2c;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 20px rgba(188,111,44,0.2);
+    }
+    .btn-outline-earth {
+      background: transparent;
+      border: 1.5px solid #1E2F2A;
+      color: #1E2F2A;
+      padding: 10px 26px;
+      border-radius: 60px;
+      font-weight: 600;
+      transition: 0.2s;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-outline-earth:hover {
+      background: #1E2F2A;
+      color: white;
+    }
+    .btn-sm {
+      padding: 6px 18px;
+      font-size: 0.75rem;
+    }
+
+    /* Page Header */
+    .page-header {
+      margin: 48px 0 24px;
+    }
+    .page-header h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .page-header p {
+      font-size: 1rem;
+      color: #5a5a5a;
+      margin-top: 8px;
+    }
+
+    /* Filter Bar */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin: 32px 0 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #f0e3d4;
+    }
+    .filter-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .filter-chip {
+      background: transparent;
+      border: 1px solid #e2d5c8;
+      padding: 8px 20px;
+      border-radius: 60px;
+      font-family: 'Syne', sans-serif;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .filter-chip.active, .filter-chip:hover {
+      background: #1E2F2A;
+      border-color: #1E2F2A;
+      color: white;
+    }
+    .result-count {
+      font-size: 0.85rem;
+      color: #7a6e5d;
+    }
+
+    /* Product Grid */
+    .product-grid-new {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 36px;
+      margin: 40px 0 80px;
+    }
+    .card-curve {
+      background: white;
+      border-radius: 28px;
+      overflow: hidden;
+      transition: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.02);
+      border: 1px solid #efe4d8;
+    }
+    .card-curve:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 28px 34px -12px rgba(0,0,0,0.12);
+      border-color: #dccfbf;
+    }
+    .card-img {
+      width: 100%;
+      aspect-ratio: 1 / 1.2;
+      object-fit: cover;
+      background: #ede5db;
+    }
+    .card-info {
+      padding: 22px;
+    }
+    .product-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+    .product-category {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #bc6f2c;
+      margin-top: 4px;
+    }
+    .price-tag {
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: #bc6f2c;
+      margin: 10px 0;
+    }
+    .card-actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .badge-new {
+      background: #f2e5da;
+      padding: 4px 14px;
+      border-radius: 100px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #bc6f2c;
+    }
+
+    /* Empty state */
+    .empty-state {
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .empty-state i {
+      font-size: 4rem;
+      opacity: 0.4;
+      color: #bc6f2c;
+    }
+
+    /* Footer */
+    footer {
+      background: #1b2622;
+      color: #dad3c9;
+      margin-top: 60px;
+      padding: 48px 0 32px;
+    }
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    /* Toast notification */
+    .toast-msg {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #1E2F2A;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 60px;
+      font-size: 0.85rem;
+      z-index: 1000;
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .toast-msg.show {
+      opacity: 1;
+    }
+
+     /* fully responsive quirks */
+    @media (max-width: 900px) {
+      .container { padding: 0 20px; }
+      .hero-v2 { grid-template-columns: 1fr; gap: 20px; margin: 20px 0 50px; }
+      .hero-text { padding: 40px 28px; }
+      .hero-img-area { min-height: 280px; background-position: center; }
+      .checkout-grid-split { grid-template-columns: 1fr; gap: 28px; }
+      .cart-item-row { flex-direction: column; align-items: flex-start; }
+      .cart-item-row > div:first-child { width: 100%; }
+      .nav-modern { gap: 18px; justify-content: flex-start; }
+      .logo-block a { font-size: 1.6rem; }
+    }
+    @media (max-width: 550px) {
+      .header-flex { flex-direction: column; align-items: flex-start; }
+      .nav-modern { width: 100%; justify-content: space-between; flex-wrap: wrap; row-gap: 10px; }
+      .nav-modern a { font-size: 0.8rem; }
+      .btn-primary, .btn-outline-earth { padding: 8px 20px; }
+      .product-grid-new { gap: 20px; }
+      .card-info { padding: 16px; }
+    }
+    .empty-cart-message {
+      text-align: center;
+      padding: 80px 20px;
+    }
+    hr {
+      margin: 24px 0;
+      border: 0;
+      height: 1px;
+      background: #f0e4d8;
+    }
+    .flex-between {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .active {
+      color: #bc6f2c !important;
+      font-weight: 800;
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NTV0NLN2X5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NTV0NLN2X5');
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-flex">
+    <div class="logo-block"><a href="index.html">Freshpoint</a></div>
+    <div class="nav-modern">
+      <a href="index.html" id="nav-home"><i class="fas fa-compass"></i> Studio</a>
+      <a href="shop.html" id="nav-shop" class="active"><i class="fas fa-vest"></i> Archive</a>
+      <a href="cart.html" id="nav-cart"><i class="fas fa-bag-shopping"></i> Bag <span id="cartCountNav" class="cart-badge">0</span></a>
+      <a href="checkout.html" id="nav-checkout"><i class="fas fa-shield-alt"></i> Secure</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="page-header">
+      <h1>Archive</h1>
+      <p>Timeless pieces, zero waste. Each garment is ethically crafted with transparency.</p>
+    </div>
+
+    <div class="filter-bar">
+      <div class="filter-buttons">
+        <button class="filter-chip active" data-filter="all">All</button>
+        <button class="filter-chip" data-filter="men">Men</button>
+        <button class="filter-chip" data-filter="women">Women</button>
+        <button class="filter-chip" data-filter="unisex">Unisex</button>
+      </div>
+      <div class="result-count" id="resultCount">Showing 6 products</div>
+    </div>
+
+    <div id="productsGrid" class="product-grid-new"></div>
+  </div>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <h4 style="font-weight:700;">Freshpoint</h4>
+      <p style="font-size:0.85rem; margin-top:6px;">Radical transparency · Climate-conscious</p>
+    </div>
+    <div style="display:flex; gap: 28px;">
+      <a href="returns.html" style="color:#dad3c9; text-decoration:none;">Returns</a>
+      <a href="privacy.html" style="color:#dad3c9; text-decoration:none;">Privacy</a>
+       <a href="terms.html" style="color:#dad3c9; text-decoration:none;">Terms and Conditions</a>
+    </div>
+    <div><i class="fas fa-cc-visa"></i> <i class="fab fa-paypal"></i> SSL Secure</div>
+  </div>
+  <div class="container" style="text-align:center; margin-top: 40px; font-size:0.7rem;">© Freshpoint 2025 — Honest pricing, no hidden fees, compliant with Google Ads policies.</div>
+</footer>
+
+<div id="toastMsg" class="toast-msg"><i class="fas fa-check-circle"></i> Added to bag</div>
+
+<script>
+  // ---------- PRODUCT DATABASE ----------
+  const products = [
+    { id: 1, name: "Oversized Raw Hem Tee", price: 34.99, category: "unisex", image: "https://images.unsplash.com/photo-1693443687750-611ad77f3aba?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "100% organic cotton, raw edge. Garment-dyed." },
+    { id: 2, name: "Corduroy Work Jacket", price: 89.99, category: "men", image: "https://images.unsplash.com/photo-1644483878406-bc4a2f63de83?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "Recycled poly/cotton, structured fit." },
+    { id: 3, name: "Satin Midi Skirt", price: 59.99, category: "women", image: "https://images.unsplash.com/photo-1708363390932-15e8a29c0f56?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "Vegan satin, bias cut, eco-friendly." },
+    { id: 4, name: "Cropped Knit Sweater", price: 69.99, category: "women", image: "https://images.unsplash.com/photo-1578795024466-26f49b4d23f6?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "RWS wool blend, warm & breathable." },
+    { id: 5, name: "Cargo Utility Pants", price: 79.99, category: "unisex", image: "https://images.unsplash.com/photo-1552902875-9ac1f9fe0c07?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "Organic cotton ripstop, 6 pockets." },
+    { id: 6, name: "Linen Blend Blazer", price: 119.99, category: "men", image: "https://images.unsplash.com/photo-1740710370552-a49b5b01f80a?q=80&w=798&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "Lightweight, unlined, summer essential." }
+  ];
+
+  // ---------- CART FUNCTIONS (localStorage, shared with other pages) ----------
+  function getCart() {
+    const stored = localStorage.getItem('Freshpoint_v2');
+    return stored ? JSON.parse(stored) : [];
+  }
+
+  function saveCart(cart) {
+    localStorage.setItem('Freshpoint_v2', JSON.stringify(cart));
+    updateCartWidget();
+  }
+
+  function updateCartWidget() {
+    const cart = getCart();
+    const totalQ = cart.reduce((s, i) => s + i.quantity, 0);
+    const badgeSpan = document.getElementById('cartCountNav');
+    if (badgeSpan) badgeSpan.innerText = totalQ;
+  }
+
+  function showToast(message) {
+    const toast = document.getElementById('toastMsg');
+    toast.innerHTML = `<i class="fas fa-check-circle"></i> ${message}`;
+    toast.classList.add('show');
+    setTimeout(() => {
+      toast.classList.remove('show');
+    }, 2000);
+  }
+
+  function addToCart(productId) {
+    let cart = getCart();
+    const product = products.find(p => p.id === productId);
+    if (!product) return;
+    
+    const existing = cart.find(i => i.id === productId);
+    if (existing) {
+      existing.quantity += 1;
+    } else {
+      cart.push({ 
+        id: product.id, 
+        name: product.name, 
+        price: product.price, 
+        quantity: 1, 
+        image: product.image 
+      });
+    }
+    saveCart(cart);
+    showToast(`${product.name} added to bag`);
+  }
+
+  // ---------- RENDER PRODUCTS WITH FILTERING ----------
+  let currentFilter = 'all';
+
+  function renderProducts() {
+    const grid = document.getElementById('productsGrid');
+    if (!grid) return;
+    
+    let filteredProducts = products;
+    if (currentFilter !== 'all') {
+      filteredProducts = products.filter(p => p.category === currentFilter);
+    }
+    
+    const resultCount = document.getElementById('resultCount');
+    if (resultCount) {
+      resultCount.innerText = `Showing ${filteredProducts.length} product${filteredProducts.length !== 1 ? 's' : ''}`;
+    }
+    
+    if (filteredProducts.length === 0) {
+      grid.innerHTML = `
+        <div class="empty-state" style="grid-column: 1/-1;">
+          <i class="fas fa-tshirt"></i>
+          <h3 style="margin: 16px 0;">No products in this category</h3>
+          <button class="btn-outline-earth" onclick="setFilter('all')">View all items</button>
+        </div>
+      `;
+      return;
+    }
+    
+    grid.innerHTML = filteredProducts.map(product => `
+      <div class="card-curve" data-product-id="${product.id}">
+        <img class="card-img" src="${product.image}" alt="${product.name}">
+        <div class="card-info">
+          <div class="product-name">${product.name}</div>
+          <div class="product-category">${product.category}</div>
+          <div class="price-tag">$${product.price}</div>
+          <div class="card-actions">
+            <button class="btn-outline-earth btn-sm" onclick="addToCart(${product.id})">
+              <i class="fas fa-plus"></i> Add
+            </button>
+            <a href="product.html?id=${product.id}" class="btn-outline-earth btn-sm" style="text-decoration:none;">
+              View →
+            </a>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function setFilter(filter) {
+    currentFilter = filter;
+    // Update active state on filter chips
+    document.querySelectorAll('.filter-chip').forEach(chip => {
+      if (chip.getAttribute('data-filter') === filter) {
+        chip.classList.add('active');
+      } else {
+        chip.classList.remove('active');
+      }
+    });
+    renderProducts();
+  }
+
+  // ---------- INITIALIZE PAGE ----------
+  document.addEventListener('DOMContentLoaded', () => {
+    renderProducts();
+    updateCartWidget();
+    
+    // Attach filter event listeners
+    const filterChips = document.querySelectorAll('.filter-chip');
+    filterChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        const filterValue = chip.getAttribute('data-filter');
+        setFilter(filterValue);
+      });
+    });
+    
+    // Make addToCart globally available for inline onclick handlers
+    window.addToCart = addToCart;
+    window.setFilter = setFilter;
+    
+    // Sync cart count on page load
+    updateCartWidget();
+  });
+</script>
+</body>
+</html>
